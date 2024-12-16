@@ -1,7 +1,5 @@
 import tkinter as tk
 
-ROOT = tk.Tk()
-
 def delete_widgets() -> None:
     for widget in root.winfo_children():
         widget.destroy()
