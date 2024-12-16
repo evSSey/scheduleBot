@@ -24,5 +24,3 @@ def make_schedule():
                         if count_of_lessons == 0:
                             break
     return grades_schedule, teachers_schedule
-
-grades_schedule, teachers_schedule = make_schedule()
