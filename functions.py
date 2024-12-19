@@ -1,5 +1,5 @@
-from data import *
-
+from test import *
+import pandas as pd
 
 def make_schedule():
     grades_schedule = {
@@ -32,7 +32,7 @@ def df_to_excel(name, schedule):
         day = pd.DataFrame.from_dict(schedule[d])
 
         # Создаем ExcelWriter с движком xlsxwriter
-        with pd.ExcelWriter(f"{name} {d}.xlsx", engine="xlsxwriter") as writer:
+        with pd.ExcelWriter(f"C:\\Users\\Evsey\\PycharmProjects\\scheduleBot\\Excel Schedule\\{name} {d}.xlsx", engine="xlsxwriter") as writer:
             # Записываем датафрейм в Excel с индексом и без замены пропусков
             day.to_excel(writer, sheet_name=f"{d}", index=True, na_rep="")
 
