@@ -2,16 +2,14 @@ from test import *
 import pandas as pd
 
 def make_schedule():
-    grades_schedule = {
-        day: {grade_dict["grade"] + grade_dict["letter"]: {i: None for i in range(1, 8)} for grade_dict in classes} for
-        day in DAYS}
-    teachers_schedule = {day: {teacher: {i: None for i in range(1, 8)} for teacher in teachers if
-                               day in teachers[teacher]["available_days"]} for day in DAYS}
+    # Пустое расписание на всю неделю, для всех классов
+    grades_schedule = {day: {grade_dict: {i: None for i in range(1, 8)} for grade_dict in grades} for day in DAYS}
+    teachers_schedule = {day: {teacher: {i: None for i in range(1, 8)} for teacher in teachers if day in teachers[teacher]["available_days"]} for day in DAYS}
 
     for teacher_name in teachers:
         for subject in teachers[teacher_name]["subjects"]:
             for grade in teachers[teacher_name]["subjects"][subject]:
-                count_of_lessons = subjects[subject][grade]
+                count_of_lessons = grades[grade][subject]
                 for i in range(1, 8):
                     if count_of_lessons == 0:
                         break
