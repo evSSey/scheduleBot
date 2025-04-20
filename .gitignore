@@ -1,7 +1,2 @@
-.idea/
-Schedules in Excel/
-__pycache__/
-male_names_rus.txt
-male_surnames_rus.txt
-schedule_example.jpg
 .venv
+.idea
