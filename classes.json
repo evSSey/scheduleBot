@@ -1,14 +1,10 @@
 [
-    {
-        "grade": "10",
-        "letter": "F"
-    },
-    {
-        "grade": "10",
-        "letter": "А"
-    },
-    {
-        "grade": "10",
-        "letter": "ВА"
-    }
+  {
+    "grade": "5",
+    "letter": "А"
+  },
+  {
+    "grade": "6",
+    "letter": "А"
+  }
 ]
